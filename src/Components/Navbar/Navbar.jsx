@@ -5,7 +5,7 @@ import logo from '../../assets/logo.png';
 
 const Navbar = () => {
   return (
-    <div className="flex flex-col bg-[#989696] h-screen w-1/6 fixed top-0 left-0">
+    <div className="flex flex-col bg-[#989696] h-screen w-32 fixed top-0 left-0">
       <div className="imglogo">
         <img src={logo} alt="Logo" className="m-2 pt-2 pl-2 w-24" />
       </div>
@@ -15,7 +15,7 @@ const Navbar = () => {
             <NavLink
               to="/table-list"
               className={({ isActive }) =>
-                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px]' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px]') + ' block px-5 py-3 transition-colors duration-300 ease-in-out '
+                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-16' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px] h-16') + ' block px-5 py-3 transition-colors duration-300 ease-in-out '
               }
             >
               Table List
@@ -25,7 +25,7 @@ const Navbar = () => {
             <NavLink
               to="/user-status"
               className={({ isActive }) =>
-                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px]' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px]') + ' block px-5 py-3 transition-colors duration-300 ease-in-out'
+                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-16' : 'h-16 bg-black text-white rounded-tl-[30px] rounded-bl-[30px]') + ' block px-5 py-3 transition-colors duration-300 ease-in-out'
               }
             >
               User Status
@@ -35,7 +35,7 @@ const Navbar = () => {
             <NavLink
               to="/order-status"
               className={({ isActive }) =>
-                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px]' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px]') + ' block px-5 py-3 transition-colors duration-300 ease-in-out'
+                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-16' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px] h-16') + ' block px-5 py-3 transition-colors duration-300 ease-in-out'
               }
             >
               Order Status
