@@ -6,9 +6,9 @@ import './Layout.css';
 
 const Layout = () => {
   return (
-    <div className="ml-[16.6667%] flex-1 flex flex-col h-screen">
+    <div className="ml-[14%] flex-1 flex flex-col h-screen">
       {/* Top Bar */}
-      <div className="flex justify-end items-center p-4 bg-white shadow">
+      <div className="flex justify-end items-center p-4">
         <img src={user} alt="User" className="w-10 h-10 rounded-full mr-4" />
         <img src={logout} alt="Logout" className="w-8 h-8" />
       </div>

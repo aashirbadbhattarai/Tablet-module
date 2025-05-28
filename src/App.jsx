@@ -6,6 +6,7 @@ import Layout from './Components/Layout/Layout';
 import TableList from './Components/TableList/TableList';
 import UserStatus from './Components/UserStatus/UserStatus';
 import OrderStatus from './Components/OrderStatus/OrderStatus';
+import ProductMenu from './Components/ProductMenu/ProductMenu';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="table-list" element={<TableList />} />
             <Route path="user-status" element={<UserStatus />} />
             <Route path="order-status" element={<OrderStatus />} />
+            <Route path="product-menu" element={<ProductMenu />} />
           </Route>
         </Routes>
       </div>

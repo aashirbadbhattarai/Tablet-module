@@ -2,9 +2,17 @@ import React from 'react';
 import menu from '../../assets/menu-button.png';
 import refresh from '../../assets/refresh.png';
 import './TableList.css'; 
+import TableAvailable from './TableAvailable';
+import TableOccupied from './TableOccupied';
+import TableNoService from './TableNoService';
+import TableReceipt from './TableReceipt';
+import TableReserved from './TableReserved';
+import PageWrapper from '../PageWrapper/PageWrapper';
 
 const TableList = () => {
+
   return (
+    <PageWrapper>
     <div className="p-2">
       <div className="flex items-center bg-[#ebebeb] rounded-4xl px-3 py-1 max-w-full table-status">
         
@@ -36,6 +44,29 @@ const TableList = () => {
 
       </div>
     </div>
+    <div className='flex flex-wrap space-x-28 space-y-10'>
+      <TableAvailable/>
+      <TableOccupied/>
+      <TableNoService/>
+      <TableReceipt/>
+      <TableReserved/>
+      <TableAvailable/>
+      <TableOccupied/>
+      <TableNoService/>
+      <TableReceipt/>
+      <TableReserved/>
+      <TableAvailable/>
+      <TableOccupied/>
+      <TableNoService/>
+      <TableReceipt/>
+      <TableReserved/>
+      <TableAvailable/>
+      <TableOccupied/>
+      <TableNoService/>
+      <TableReceipt/>
+      <TableReserved/>                  
+    </div>
+    </PageWrapper>
   );
 };
 
