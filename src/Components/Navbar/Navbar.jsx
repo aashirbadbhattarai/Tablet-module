@@ -15,30 +15,30 @@ const Navbar = () => {
             <NavLink
               to="/table-list"
               className={({ isActive }) =>
-                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-16' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px] h-16') + ' block px-5 py-3 transition-colors duration-300 ease-in-out '
+                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-10' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px] h-10') + ' block px-5 py-3 transition-colors duration-300 ease-in-out '
               }
             >
-              Table List
+              Table
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/user-status"
               className={({ isActive }) =>
-                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-16' : 'h-16 bg-black text-white rounded-tl-[30px] rounded-bl-[30px]') + ' block px-5 py-3 transition-colors duration-300 ease-in-out'
+                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-10' : 'h-10 bg-black text-white rounded-tl-[30px] rounded-bl-[30px]') + ' block px-5 py-3 transition-colors duration-300 ease-in-out'
               }
             >
-              User Status
+              User
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/order-status"
               className={({ isActive }) =>
-                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-16' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px] h-16') + ' block px-5 py-3 transition-colors duration-300 ease-in-out'
+                (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-10' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px] h-10') + ' block px-5 py-3 transition-colors duration-300 ease-in-out'
               }
             >
-              Order Status
+              Order
             </NavLink>
           </li>
         </ul>

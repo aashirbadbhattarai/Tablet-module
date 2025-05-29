@@ -50,9 +50,9 @@ const BillingSection = () => {
       <div className='mt-4'>
         <BillingAmount />
       </div>
-    </div>
+    
 
-    <div className='flex mt-4 gap-x-2'>
+    <div className='flex mt-6 gap-x-2'>
       <BillingOptions label="Print ticket" color="blue" onClick={handlePrint}/>
       <BillingOptions label="Transfer Order" color="blue" onClick={handleTransfer}/>
       <BillingOptions label="Place Order" color="blue" onClick={handlePlace}/>
@@ -63,9 +63,7 @@ const BillingSection = () => {
       <BillingOptions label="Print Order" color="green" onClick={handlePrintOrder}/>
       <BillingOptions label="Order Payment" color="green" onClick={handlePayment}/>
     </div>
-
-
-
+    </div>
     </>
   )
 }

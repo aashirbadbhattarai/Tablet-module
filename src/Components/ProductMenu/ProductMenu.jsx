@@ -1,9 +1,11 @@
 import React from 'react'
-import './ProductMenu.css'; // Assuming you have a CSS file for styles
+import './ProductMenu.css';
+import { useNavigate } from 'react-router-dom';
 import PageWrapper from '../PageWrapper/PageWrapper';
 import BillingSection from '../BillingSection/BillingSection';
 
 const ProductMenu = () => {
+    const navigate = useNavigate();
   return (
     <PageWrapper>
     <div className='flex justify-between'>
@@ -29,7 +31,7 @@ const ProductMenu = () => {
 
     <div className='Menu-Container'>
         <ul className='p-4'>
-            <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6'>Japanese Cuisines</li>
+            <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6'onClick={()=>navigate('/item-menu')}>Japanese Cuisines</li>
             <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6'>Chinese Cuisines</li>
             <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6'>Indian Cuisines</li>
             <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6'>French Cuisines</li>

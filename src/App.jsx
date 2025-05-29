@@ -7,6 +7,7 @@ import TableList from './Components/TableList/TableList';
 import UserStatus from './Components/UserStatus/UserStatus';
 import OrderStatus from './Components/OrderStatus/OrderStatus';
 import ProductMenu from './Components/ProductMenu/ProductMenu';
+import Menu from './Components/ProductMenu/Menu';
 
 const App = () => {
   return (
@@ -14,12 +15,13 @@ const App = () => {
       <div className="flex h-screen w-screen">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Layout />}>
             <Route path="table-list" element={<TableList />} />
             <Route path="user-status" element={<UserStatus />} />
             <Route path="order-status" element={<OrderStatus />} />
             <Route path="product-menu" element={<ProductMenu />} />
-          </Route>
+            <Route path="item-menu" element={<Menu />}/>  
+            </Route>
         </Routes>
       </div>
     </Router>
