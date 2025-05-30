@@ -31,16 +31,16 @@ const ProductMenu = () => {
 
     <div className='Menu-Container'>
         <ul className='p-4'>
-            <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6'onClick={()=>navigate('/item-menu')}>Japanese Cuisines</li>
-            <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6'>Chinese Cuisines</li>
-            <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6'>Indian Cuisines</li>
-            <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6'>French Cuisines</li>
+            <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6' onClick={()=>navigate('/item-menu')}>Japanese Cuisines</li>
+            <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6' onClick={()=>navigate('/item-menu')}>Chinese Cuisines</li>
+            <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6' onClick={()=>navigate('/item-menu')}>Indian Cuisines</li>
+            <li className='bg-[#E0E0E0] rounded-xl shadow-md mb-6' onClick={()=>navigate('/item-menu')}>French Cuisines</li>
         </ul>
-    </div>
+    </div> 
     </div>
 
     <div>
-        <BillingSection />
+    <BillingSection selectedItems={[]} />
     </div>
     </div>
     </PageWrapper>

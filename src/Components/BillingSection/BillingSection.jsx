@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import PageWrapper from '../PageWrapper/PageWrapper'
 import ProductBilling from './ProductBilling'
 import BillingAmount from './BillingAmount'
@@ -14,7 +15,9 @@ import{
 
 
 
-const BillingSection = () => {
+const BillingSection = ({selectedItems}) => {
+  const location = useLocation();
+  const isProductMenu = location.pathname.includes('/product-menu');
   return (
     <>
     <div className='bg-[#F4F0F0] w-[25rem] h-svh p-4'>
@@ -34,19 +37,15 @@ const BillingSection = () => {
         <span>Rate</span>
         <span>Amount</span>
       </div>
-      <div className='overflow-y-auto h-[18rem]'>
-        <ProductBilling />
-        <ProductBilling />
-        <ProductBilling />
-        <ProductBilling />
-        <ProductBilling />
-        <ProductBilling />
-        <ProductBilling />
-        <ProductBilling />
-        <ProductBilling />
-        <ProductBilling />
-        <ProductBilling />
-      </div>
+      <div
+        className={`overflow-y-auto h-[18rem] transition-opacity duration-500 ${
+        isProductMenu ? 'opacity-0' : 'opacity-100'
+        }`}
+      >
+        {selectedItems.map((item, index) => (
+        <ProductBilling key={index} item={item} />
+  ))}
+</div>
       <div className='mt-4'>
         <BillingAmount />
       </div>
