@@ -3,12 +3,12 @@ import Up from '../../assets/up-arrow.png';
 import Down from '../../assets/down-arrow.png';
 
 const ProductBilling = ({ item }) => {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(item.quantity || 1);
 
   useEffect(() => {
-    // Reset quantity when a new item is selected
-    setQuantity(1);
-  }, [item]);
+    setQuantity(item.quantity || 1);
+    }, [item]);
+
 
   if (!item) return null;
 
