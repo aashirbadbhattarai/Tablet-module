@@ -3,7 +3,7 @@ import Exit from '../../assets/close.png'
 import tick from '../../assets/greentick.png'
 
 
-const OrderTransfer = ({onClose}) => {
+const OrderPrint = ({onClose}) => {
     const [show, setShow] = useState(false)
 
     useEffect(() =>{
@@ -40,4 +40,4 @@ return (
   )
 }
 
-export default OrderTransfer
+export default OrderPrint

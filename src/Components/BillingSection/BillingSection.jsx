@@ -4,19 +4,13 @@ import PageWrapper from '../PageWrapper/PageWrapper'
 import ProductBilling from './ProductBilling'
 import BillingAmount from './BillingAmount'
 import BillingOptions from './BillingOptions'
-import{
-  handlePrint,
-  handleTransfer,
-  handlePlace,
-  handleCancel,
-  
-  handlePayment
-} from './buttonHandler'
+import{ handleCancel } from './buttonHandler'
 
 import TicketPrinting from '../Popups/TicketPrinting'
 import OrderTransfer from '../Popups/OrderTransfer'
 import OrderPlacement from '../Popups/OrderPlacement'
 import OrderPrint from '../Popups/OrderPrint'
+import Payment from '../Popups/Payment'
 
 
 
@@ -67,14 +61,13 @@ const BillingSection = ({selectedItems}) => {
     <div className='flex mt-2 gap-x-7'>
       <BillingOptions label="Cancel" color="red" onClick={handleCancel}/>
       <BillingOptions label="Print Order" color="green" onClick={() => setActiveTicket('orderPrint')}/>
-      <BillingOptions label="Order Payment" color="green" onClick={handlePayment}/>
+      <BillingOptions label="Bill Payment" color="green" onClick={()=>setActiveTicket('payment')}/>
     </div>
     </div>
     {activeTicket === 'printTicket' && (
       <TicketPrinting
         isOpen={activeTicket === 'printTicket'}
         onClose={() => setActiveTicket(null)}
-        onPrint={handlePrint}
       />
     )}
 
@@ -82,7 +75,6 @@ const BillingSection = ({selectedItems}) => {
       <OrderTransfer
         isOpen={activeTicket === 'orderTransfer'}
         onClose={() => setActiveTicket(null)}
-        onTransfer={handleTransfer}
       />
     )}
 
@@ -90,15 +82,21 @@ const BillingSection = ({selectedItems}) => {
       <OrderPlacement
         isOpen={activeTicket === 'orderPlacement'}
         onClose ={() => setActiveTicket(null)}
-        onPlace={handlePlace}
+
         />
     )}
 
     {activeTicket === 'orderPrint' &&(
       <OrderPrint
         isOpen={activeTicket === 'orderPlacement'}
-        onClose ={() => setActiveTicket(null)}
-        
+
+        />
+    )}
+
+    {activeTicket === 'payment' &&(
+      <Payment
+        isOpen={activeTicket === 'payment'}
+        onClose={ ()=> setActiveTicket(null) }
         />
     )}
 
