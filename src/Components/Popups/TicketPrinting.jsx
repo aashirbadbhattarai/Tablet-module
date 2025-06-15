@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import PropTypes from 'prop-types';
 import Exit from '../../assets/close.png'
 import tick from '../../assets/greentick.png'
 
@@ -42,5 +43,8 @@ const TicketPrinting = ({onClose}) => {
     
   )
 }
+TicketPrinting.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
 
 export default TicketPrinting

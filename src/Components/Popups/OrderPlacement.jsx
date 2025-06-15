@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Exit from '../../assets/close.png'
 import tick from '../../assets/greentick.png'
+import PropTypes from 'prop-types'
 
 
 const OrderPlacement = ({onClose}) => {
@@ -37,7 +38,11 @@ return (
       </div>
     </div>
     
-  )
-}
+  );
+};
+OrderPlacement.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
+
 
 export default OrderPlacement

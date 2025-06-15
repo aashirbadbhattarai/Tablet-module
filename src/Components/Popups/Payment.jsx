@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import Exit from "../../assets/close.png";
 import cash from "../../assets/dollar.png";
 import fonepay from "../../assets/mobilewallet.png";
@@ -76,7 +77,7 @@ const Payment = ({ onClose }) => {
                 )}
               </div>
             </div>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Confirm
             </button>
           </div>
@@ -84,6 +85,9 @@ const Payment = ({ onClose }) => {
       </div>
     </div>
   );
+};
+Payment.propTypes = {
+  onClose: PropTypes.func.isRequired,
 };
 
 export default Payment;

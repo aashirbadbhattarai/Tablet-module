@@ -13,7 +13,7 @@ const Navbar = () => {
         <ul className="space-y-5">
           <li >
             <NavLink
-              to="/table-list"
+              to="/dashboard/table-list"
               className={({ isActive }) =>
                 (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-10' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px] h-10') + ' block px-5 py-3 transition-colors duration-300 ease-in-out '
               }
@@ -23,7 +23,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/user-status"
+              to="/dashboard/user-status"
               className={({ isActive }) =>
                 (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-10' : 'h-10 bg-black text-white rounded-tl-[30px] rounded-bl-[30px]') + ' block px-5 py-3 transition-colors duration-300 ease-in-out'
               }
@@ -33,7 +33,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/order-status"
+              to="/dashboard/order-status"
               className={({ isActive }) =>
                 (isActive ? 'bg-white text-black rounded-tl-[30px] rounded-bl-[30px] h-10' : 'bg-black text-white rounded-tl-[30px] rounded-bl-[30px] h-10') + ' block px-5 py-3 transition-colors duration-300 ease-in-out'
               }

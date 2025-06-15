@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const Modal = ({ isOpen, onClose, onConfirm, item }) => {
   const [quantity, setQuantity] = useState(1);
@@ -58,6 +59,16 @@ const Modal = ({ isOpen, onClose, onConfirm, item }) => {
       </div>
     </div>
   );
+};
+Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onConfirm: PropTypes.func.isRequired,
+  item: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  }),
 };
 
 export default Modal;

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const BillingOptions = ({label,onClick,color}) => {
     const baseClasses = "px-4 py-2 rounded-md shadow transition";
@@ -14,6 +15,12 @@ const BillingOptions = ({label,onClick,color}) => {
         </button>
   )
 }
+
+BillingOptions.propTypes = {
+    label: PropTypes.node.isRequired,
+    onClick: PropTypes.func,
+    color: PropTypes.oneOf(['blue', 'red', 'green'])
+};
 
 export default BillingOptions
 

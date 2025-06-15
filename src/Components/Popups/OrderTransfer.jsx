@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import PropTypes from 'prop-types'
 import Exit from '../../assets/close.png'
 import tick from '../../assets/greentick.png'
 
@@ -38,6 +39,9 @@ return (
     </div>
     
   )
+}
+OrderTransfer.propTypes = {
+  onClose: PropTypes.func.isRequired,
 }
 
 export default OrderTransfer

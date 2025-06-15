@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Up from '../../assets/up-arrow.png';
 import Down from '../../assets/down-arrow.png';
 
@@ -49,6 +50,13 @@ const ProductBilling = ({ item }) => {
       </div>
     </div>
   );
+};
+ProductBilling.propTypes = {
+  item: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    quantity: PropTypes.number,
+  }).isRequired,
 };
 
 export default ProductBilling;

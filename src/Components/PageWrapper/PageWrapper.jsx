@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const PageWrapper = ({ children }) => {
   const [show, setShow] = useState(false);
@@ -18,6 +19,9 @@ const PageWrapper = ({ children }) => {
       {children}
     </div>
   );
+};
+PageWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default PageWrapper;

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import food from '../../assets/pizza.jpg'
 import './Items.css'
 
@@ -22,5 +23,8 @@ const Items = ({ onClick }) => {
     </div>
   )
 }
+Items.propTypes = {
+  onClick: PropTypes.func,
+};
 
 export default Items
